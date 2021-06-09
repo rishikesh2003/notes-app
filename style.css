@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: yellow;
+  font-family: 'Montserrat', sans-serif;
+}
+.starting-notes{
+  width: 100%;
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: black 2px solid;
+  height: 300px;
+}
+input{
+  width: 300px;
+  height: 28px;
+}
+textarea{
+  width: 300px;
+}
+input,textarea{
+  font-size: 18px;
+  padding: 20px;
+}
+.starting-notes .plus-button{
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background: green;
+  margin-left: 350px;
+  font-size: 18px;
+  transform: translateY(-40px);
+}
+.sticky-notes{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 24px;
+  width: 100%;
+  height: 100%;
+}
+.sticky-notes .js{
+  justify-content: start;
+  align-items: start;
+  border-bottom: none;
+}
+.sticky-notes .js .delete-button{
+  font-size: 18px;
+  padding: 10px 14px;
+  border: none;
+  margin-left: 310px;
+  transform: translateY(-40px);
+  background: green;  
+}
+@media(max-width: 768px){
+  .sticky-notes{
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .sticky-notes .js{
+    align-items: center;
+    justify-content: center;
+  }
+  .sticky-notes .js .delete-button{
+    transform: translateX(-50x);
+  }
+}
